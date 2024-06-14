@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "MyCrumbs-UiKit",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -22,70 +22,88 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Website",
+    "url": "https://mycrumbs.xyz"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
+  
   "anchors": [
+   
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
+      "name": "Components",
       "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "/components"
     }
+    
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Components",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
-      ]
-    },
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "components/AirpodsProLeft",
+        "components/GridAnimatedLayout",
+        "components/LightBox",
+        "components/PageLoading",
+        "components/SilentIconLeft",
+        "components/SongThumbnail",
+        "components/3DCard",
+        "components/AirpodsProRight",
+        "components/Alert",
+        "components/Audio",
+        "components/Button",
+        "components/Button.stories",
+        "components/Card",
+        "components/Card.stories",
+        "components/CardContainer.stories",
+        "components/cardcontainer",
+        "components/ChargingIconRight",
+        "components/ChargingTextLeft",
+        "components/Checkbox",
+        "components/Collapse",
+        "components/DynamicIsland",
+        "components/EmptyState",
+        "components/ErrorMessage",
+        "components/Form",
+        "components/grid",
+        "components/Grid.stories",
+        "components/GridLayout",
+        "components/HelpTooltip",
+        "components/HelpTooltip.stories",
+        "components/Image",
+        "components/Image.stories",
+        "components/Input",
+        "components/Input.stories",
+        "components/Lamp",
+        "components/Modal",
+        "components/MovingBorder",
+        "components/Modal.stories", 
+        "components/Popover",
+        "components/PropertyDefault",
+        "components/Radio",
+        "components/RangeSlider",
+        "components/Select",
+        "components/Select.stories",
+        "components/SilentIconLeft4",
+        "components/SilentTextRight",
+        "components/Spinner",
+        "components/Spinner.stories",
+        "components/TabButton",
+        "components/TabButton.stories",
+        "components/tabutton",
+        "components/TextArea",
+        "components/TextArea.stories",
+        "components/Toggle",
+        "components/Toggle2",
+        "components/Tooltip",
+        "components/Toggle.stories",
+        "components/Tooltip.stories",
+        "components/WarningMessage"
       ]
     }
+   
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "x": "https://x.com/nikomatt69",
+    "github": "https://github.com/nikomatt69"
+
   }
 }
