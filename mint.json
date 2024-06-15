@@ -29,7 +29,7 @@
   "anchors": [
     {
       "name": "Get Started",
-      "icon": "introduction",
+      "icon": "book",
       "url": "introduction"
     },
    
