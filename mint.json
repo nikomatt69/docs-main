@@ -37,14 +37,16 @@
   ],
   "navigation": [
     {
+      "group": "Get Started",
+      "pages": [
+        "introduction"
+      ]
+    },
+    {
       "group": "Components",
       "pages": [
-        "components/AirpodsProLeft",
-        "components/LightBox",
-        "components/PageLoading",
-        "components/SilentIconLeft",
-        "components/SongThumbnail",
         "components/3DCard",
+        "components/AirpodsProLeft",
         "components/AirpodsProRight",
         "components/Alert",
         "components/Audio",
@@ -62,13 +64,17 @@
         "components/Image",
         "components/Input",
         "components/Lamp",
+        "components/LightBox",
         "components/Modal",
         "components/MovingBorder",
+        "components/PageLoading",
         "components/Popover",
         "components/PropertyDefault",
         "components/Radio",
         "components/RangeSlider",
         "components/Select",
+        "components/SilentIconLeft",
+        "components/SongThumbnail",
         "components/SilentIconLeft4",
         "components/SilentTextRight",
         "components/Spinner",
