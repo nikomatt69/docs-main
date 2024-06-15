@@ -26,7 +26,7 @@ yarn add mycrumbs-uikit
 
 To use MyCrumbs UI Kit, you need to wrap your application with the `MyCrumbsProvider`. This ensures that all components have access to the theme and other configurations.
 
-```javascript
+```
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { MyCrumbsProvider } from 'mycrumbs-uikit';
@@ -46,7 +46,7 @@ Now you can start using the components provided by MyCrumbs UI Kit. Here is an e
 
 
 ```
-javascript
+
 import React from 'react';
 import { Button } from 'mycrumbs-uikit';
 const MyComponent = () => (
@@ -63,15 +63,15 @@ export default MyComponent;
 MyCrumbs UI Kit allows you to customize the theme to match your brand. You can do this by passing a custom theme to the `MyCrumbsProvider`.
 
 ```
-javascript
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { MyCrumbsProvider, createTheme } from 'mycrumbs-uikit';
 import App from './App';
 const customTheme = createTheme({
 colors: {
-primary: '#ff6347',
-secondary: '#4caf50',
+primary: '#3b82f6',
+secondary: '#bfdbfe',
 },
 });
 ReactDOM.render(
