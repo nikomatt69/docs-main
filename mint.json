@@ -27,18 +27,7 @@
   },
   
   "anchors": [
-     {
-        "anchor": "Documentation",
-        "icon": "book-open",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "quickstart"
-            ]
-          }
-        ]
-      },
+    
     {
       "name": "Get Started",
       "icon": "book",
@@ -53,15 +42,7 @@
     
   ],
   "navigation": [
-    {
-      
-          "group": "Get Started",
-          "pages": [
-            "quickstart"
-          ]
-        },
-      
-    
+
     {
       "group": "Get Started",
       "pages": [
