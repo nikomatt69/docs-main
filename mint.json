@@ -27,6 +27,18 @@
   },
   
   "anchors": [
+     {
+        "anchor": "Documentation",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "quickstart"
+            ]
+          }
+        ]
+      },
     {
       "name": "Get Started",
       "icon": "book",
@@ -42,6 +54,15 @@
   ],
   "navigation": [
     {
+      
+          "group": "Get Started",
+          "pages": [
+            "quickstart"
+          ]
+        },
+      
+    
+    {
       "group": "Get Started",
       "pages": [
         "introduction"
@@ -52,19 +73,13 @@
       "group": "Components",
       "pages": [
         "components/3DCard",
-        "components/AirpodsProLeft",
-        "components/AirpodsProRight",
         "components/Alert",
         "components/Audio",
         "components/Button",
         "components/Card",
-        "components/ChargingIconRight",
-        "components/ChargingTextLeft",
         "components/Checkbox",
         "components/Collapse",
-        "components/EmptyState",
         "components/ErrorMessage",
-        "components/Form",
         "components/GridLayout",
         "components/HelpTooltip",
         "components/Image",
@@ -79,17 +94,13 @@
         "components/Radio",
         "components/RangeSlider",
         "components/Select",
-        "components/SilentIconLeft",
         "components/SongThumbnail",
-        "components/SilentIconLeft",
-        "components/SilentTextRight",
         "components/Spinner",
         "components/TabButton",
         "components/TextArea",
         "components/Toggle",
         "components/Toggle2",
-        "components/Tooltip",
-        "components/WarningMessage"
+        "components/Tooltip"
       ]
     }
    
