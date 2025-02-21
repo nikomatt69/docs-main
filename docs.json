@@ -12,18 +12,6 @@
   "navigation": {
     "anchors": [
       {
-        "anchor": "Documentation",
-        "icon": "book-open",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "quickstart"
-            ]
-          }
-        ]
-      },
-      {
         "anchor": "Get Started",
         "icon": "book",
         "groups": [
