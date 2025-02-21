@@ -23,7 +23,7 @@
   ],
   "topbarCtaButton": {
     "name": "Website",
-    "url": "https://mycrumbs.xyz"
+    "url": "https://www.mycrumbs.xyz"
   },
   
   "anchors": [
@@ -44,8 +44,8 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart"
+        "introduction"
+        
       ]
     },
     {
