@@ -1,25 +1,116 @@
 ---
 title: HelpTooltip Component
 ---
-This component provides a tooltip with help information, typically used to offer additional context or guidance.
+
+A tooltip component designed to provide additional help or information when users hover over an information icon. Built with Tippy.js for reliable positioning and animations.
 
 ## Props
 
-- `prop1`: Description of prop1.
-- `prop2`: Description of prop2.
+- `children`: ReactNode - The content to be displayed in the tooltip
+- The component inherits all Tippy.js props for customization
 
-## Usage
+## Usage Examples
 
+### Basic Tooltip
 ```tsx
 import { HelpTooltip } from 'mycrumbs-uikit';
 
-const props = {};
-
-<HelpTooltip prop1="value1" prop2="value2" />;
+<HelpTooltip>
+  This field is required for account creation
+</HelpTooltip>
 ```
 
-<iframe src="https://example.com" width="600" height="200"  rounded="12px' className={'flex'}frameborder="0"></iframe>
+### With Form Field
+```tsx
+<div className="space-y-2">
+  <label className="flex items-center gap-2">
+    API Key
+    <HelpTooltip>
+      You can find your API key in the dashboard settings
+    </HelpTooltip>
+  </label>
+  <input type="text" />
+</div>
+```
 
+### With Rich Content
+```tsx
+<HelpTooltip>
+  <div className="space-y-2">
+    <p>Password requirements:</p>
+    <ul className="list-disc pl-4">
+      <li>At least 8 characters</li>
+      <li>One uppercase letter</li>
+      <li>One number</li>
+      <li>One special character</li>
+    </ul>
+  </div>
+</HelpTooltip>
+```
+
+### Custom Styling
+```tsx
+<HelpTooltip className="bg-blue-500 text-white">
+  Custom styled tooltip content
+</HelpTooltip>
+```
+
+## Features
+
+- Automatic positioning
+- Smooth animations
+- Dark mode support
+- Keyboard accessibility
+- Touch device support
+- Custom styling options
+- Rich content support
+
+## Styling
+
+The component uses Tailwind CSS for styling and includes:
+- Rounded corners
+- Consistent padding
+- Information icon styling
+- Shadow effects
+- Theme compatibility
+- Transition animations
+
+## Best Practices
+
+1. Content Guidelines:
+   - Keep tooltip content concise
+   - Use clear, helpful language
+   - Avoid redundant information
+   - Consider screen space
+
+2. Positioning:
+   - Place tooltips logically
+   - Avoid overlapping content
+   - Consider viewport edges
+   - Maintain readability
+
+3. Interaction:
+   - Ensure sufficient hover area
+   - Provide keyboard access
+   - Consider touch devices
+   - Maintain appropriate timing
+
+## Accessibility
+
+- Keyboard focusable
+- Screen reader support
+- ARIA attributes
+- Sufficient color contrast
+- Touch target size
+- Focus management
+
+<iframe 
+  src="https://663a6564311e0ec20c42bab9-xlpxfwvbkd.chromatic.com/iframe.html?args=&id=components-help-tooltip--default" 
+  width="600" 
+  height="200"
+  className="flex rounded-xl"
+
+></iframe>
 
 ```tsx
 import 'tippy.js/dist/tippy.css';

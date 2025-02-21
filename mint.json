@@ -18,7 +18,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:nikoemme@skiff.com"
+      "url": "mailto:nicola.mattioli.95@gmail.com"
     }
   ],
   "topbarCtaButton": {
@@ -81,7 +81,7 @@
         "components/Select",
         "components/SilentIconLeft",
         "components/SongThumbnail",
-        "components/SilentIconLeft4",
+        "components/SilentIconLeft",
         "components/SilentTextRight",
         "components/Spinner",
         "components/TabButton",

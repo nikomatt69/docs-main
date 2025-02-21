@@ -2,24 +2,120 @@
 title: WarningMessage Component
 ---
 
-This component displays warning messages to the user, indicating caution or important notices.
+A component for displaying warning messages and alerts with a distinctive yellow styling. Useful for showing important notices, cautions, or potential issues to users.
 
 ## Props
 
-- `prop1`: Description of prop1.
-- `prop2`: Description of prop2.
+- `title`: string (optional) - The title of the warning message
+- `message`: ReactNode (optional) - The content of the warning message
+- `className`: string (optional) - Additional CSS classes for customization
 
-## Usage
+## Usage Examples
 
+### Basic Warning
 ```tsx
 import { WarningMessage } from 'mycrumbs-uikit';
 
-const props = {};
-
-<WarningMessage prop1="value1" prop2="value2" />;
+<WarningMessage
+  message="This action cannot be undone. Please proceed with caution."
+/>
 ```
 
-<iframe src="https://example.com" width="600" height="200"  rounded="12px' className={'flex'}frameborder="0"></iframe>
+### With Title
+```tsx
+<WarningMessage
+  title="Important Notice"
+  message="Your subscription will expire in 3 days."
+/>
+```
+
+### With Custom Content
+```tsx
+<WarningMessage
+  title="Browser Compatibility"
+  message={
+    <div className="space-y-2">
+      <p>Some features may not work in your current browser:</p>
+      <ul className="list-disc pl-4">
+        <li>WebGL support is required</li>
+        <li>JavaScript must be enabled</li>
+      </ul>
+    </div>
+  }
+/>
+```
+
+### With Custom Styling
+```tsx
+<WarningMessage
+  title="System Update"
+  message="Scheduled maintenance in 30 minutes"
+  className="mt-4 mb-8"
+/>
+```
+
+### In Form Context
+```tsx
+<form onSubmit={handleSubmit}>
+  <div className="space-y-4">
+    <Input label="API Key" />
+    <WarningMessage
+      message="Never share your API key. It provides full access to your account."
+    />
+    <button type="submit">Save Changes</button>
+  </div>
+</form>
+```
+
+## Styling
+
+The component uses Tailwind CSS for styling and includes:
+- Yellow color scheme
+- Rounded corners
+- Responsive padding
+- Dark mode support
+- Border highlighting
+- Consistent typography
+- Flexible layout
+
+## Best Practices
+
+1. Content Guidelines:
+   - Keep messages clear and concise
+   - Use appropriate warning level
+   - Provide actionable information
+   - Maintain consistent tone
+
+2. Visual Presentation:
+   - Use appropriate spacing
+   - Ensure messages are noticeable
+   - Maintain readability
+   - Consider context
+
+3. Implementation:
+   - Group related warnings
+   - Position strategically
+   - Consider dismissible options
+   - Handle dynamic content
+
+## Accessibility
+
+- High color contrast
+- Semantic structure
+- Screen reader support
+- Keyboard navigation
+- ARIA attributes
+- Focus management
+
+## Implementation Notes
+
+- Conditional rendering
+- Flexible content support
+- Theme compatibility
+- Responsive design
+- Error boundary integration
+- Context awareness
+
 
 
 ```tsx

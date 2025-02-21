@@ -2,26 +2,130 @@
 title: Spinner Component
 ---
 
-
-This component provides spinner functionality, typically used to indicate loading or processing.
+A versatile loading spinner component that provides visual feedback for loading states. Supports multiple sizes, variants, and customization options.
 
 ## Props
 
-- `prop1`: Description of prop1.
-- `prop2`: Description of prop2.
+- `className`: string (optional) - Additional CSS classes
+- `variant`: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' (optional) - Color variant of the spinner
+- `size`: 'xs' | 'sm' | 'md' | 'lg' (optional) - Size of the spinner
 
-## Usage
+## Usage Examples
 
+### Basic Spinner
 ```tsx
 import { Spinner } from 'mycrumbs-uikit';
 
-const props = {};
-
-<Spinner prop1="value1" prop2="value2" />;
+<Spinner />
 ```
 
-<iframe src="https://example.com" width="600" height="200"  rounded="12px' className={'flex'}frameborder="0"></iframe>
+### Different Sizes
+```tsx
+<div className="space-x-4">
+  <Spinner size="xs" />
+  <Spinner size="sm" />
+  <Spinner size="md" />
+  <Spinner size="lg" />
+</div>
+```
 
+### Color Variants
+```tsx
+<div className="space-x-4">
+  <Spinner variant="primary" />
+  <Spinner variant="secondary" />
+  <Spinner variant="success" />
+  <Spinner variant="warning" />
+  <Spinner variant="danger" />
+</div>
+```
+
+### With Custom Styling
+```tsx
+<Spinner className="text-purple-500" />
+```
+
+### In Button
+```tsx
+<button disabled={isLoading} className="flex items-center space-x-2">
+  {isLoading && <Spinner size="sm" />}
+  <span>Submit</span>
+</button>
+```
+
+### Loading State
+```tsx
+const LoadingState = () => {
+  return (
+    <div className="flex items-center justify-center h-40">
+      <Spinner size="lg" />
+    </div>
+  );
+};
+```
+
+## Styling
+
+The component uses Tailwind CSS for styling and includes:
+- Smooth animation
+- Color variants
+- Size options
+- Border styling
+- Dark mode support
+- Customizable colors
+- Responsive design
+
+## Size Guide
+
+- `xs`: 16px - For inline or compact UI elements
+- `sm`: 20px - For buttons or small containers
+- `md`: 32px - Default size, for general use
+- `lg`: 40px - For prominent loading states
+
+## Color Variants
+
+- `primary`: Brand color, default option
+- `secondary`: Neutral color for secondary actions
+- `success`: Green for success states
+- `warning`: Yellow for warning states
+- `danger`: Red for error states
+
+## Best Practices
+
+1. Usage Guidelines:
+   - Use appropriate sizes for context
+   - Choose meaningful color variants
+   - Consider loading duration
+   - Maintain visual hierarchy
+
+2. Implementation:
+   - Center in containers
+   - Match button heights
+   - Use consistent variants
+   - Consider mobile views
+
+3. Accessibility:
+   - Add loading announcements
+   - Maintain color contrast
+   - Consider reduced motion
+   - Provide text alternatives
+
+## Implementation Notes
+
+- Uses CSS animations
+- Supports theme customization
+- Maintains aspect ratio
+- Handles color modes
+- Responsive sizing
+- Performance optimized
+
+<iframe 
+  src="https://663a6564311e0ec20c42bab9-xlpxfwvbkd.chromatic.com/iframe.html?args=&id=components-spinner--template" 
+  width="600" 
+  height="200"
+  className="flex rounded-xl"
+
+></iframe>
 
 ```tsx
 import type { FC } from 'react';
@@ -59,5 +163,3 @@ export const Spinner: FC<SpinnerProps> = ({
     />
   );
 };
-
-```
