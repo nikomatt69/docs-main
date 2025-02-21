@@ -1,28 +1,115 @@
 ---
-title: ErrorMessage Component
+title: ErrorMessage 
 ---
 
-This component displays error messages to the user, indicating issues or problems.
+A component for displaying error messages with consistent styling and structure. Useful for showing validation errors, API errors, or any other error states in the application.
 
 ## Props
 
-- `prop1`: Description of prop1.
-- `prop2`: Description of prop2.
+- `title`: string (optional) - The title of the error message
+- `error`: Error (optional) - The error object containing the message to display
+- `className`: string (optional) - Additional CSS classes to apply to the error container
 
-## Usage
+## Usage Examples
 
-```tsx
+### Basic Error Message
+```javascript
 import { ErrorMessage } from 'mycrumbs-uikit';
 
-const props = {};
-
-<ErrorMessage prop1="value1" prop2="value2" />;
+<ErrorMessage
+  title="Form Error"
+  error={new Error("Please fill in all required fields")}
+/>
 ```
 
-<iframe src="https://example.com" width="600" height="200"  rounded="12px' className={'flex'}frameborder="0"></iframe>
+### API Error Display
+```javascript
+const [error, setError] = useState<Error | null>(null);
+
+try {
+  await apiCall();
+} catch (err) {
+  setError(err as Error);
+}
+
+return <ErrorMessage error={error} />;
+```
+
+### Custom Styling
+```javascript
+<ErrorMessage
+  title="Critical Error"
+  error={new Error("System unavailable")}
+  className="mt-4 mb-2"
+/>
+```
+
+### Form Validation Error
+```javascript
+<form>
+  <input type="email" />
+  {emailError && (
+    <ErrorMessage
+      error={new Error("Please enter a valid email address")}
+    />
+  )}
+</form>
+```
+
+### With Custom Error Object
+```javascript
+const customError = {
+  message: "Unable to process your request"
+};
+
+<ErrorMessage
+  title="Processing Error"
+  error={customError as Error}
+/>
+```
+
+## Styling
+
+The component uses Tailwind CSS for styling and includes:
+- Red color scheme for error states
+- Rounded corners
+- Responsive padding
+- Dark mode support
+- Border highlighting
+- Consistent typography
+- Flexible layout
+
+## Best Practices
+
+1. Error Content:
+   - Use clear, concise error messages
+   - Explain what went wrong
+   - Provide guidance on how to resolve the error
+   - Maintain a consistent tone
+
+2. Visual Presentation:
+   - Use appropriate spacing
+   - Ensure error messages are noticeable
+   - Maintain readability
+   - Consider the context where errors appear
+
+3. Implementation:
+   - Handle different types of errors appropriately
+   - Provide fallback content when needed
+   - Consider internationalization
+   - Log errors when appropriate
+
+## Accessibility
+
+- High color contrast for readability
+- Semantic HTML structure
+- Screen reader friendly
+- Clear error indication
+- Proper ARIA attributes
 
 
-```tsx
+
+```javascript
 import type { FC } from 'react';
 
 interface ErrorMessageProps {

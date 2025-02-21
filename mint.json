@@ -18,15 +18,16 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:nikoemme@skiff.com"
+      "url": "mailto:nicola.mattioli.95@gmail.com"
     }
   ],
   "topbarCtaButton": {
     "name": "Website",
-    "url": "https://mycrumbs.xyz"
+    "url": "https://www.mycrumbs.xyz"
   },
   
   "anchors": [
+    
     {
       "name": "Get Started",
       "icon": "book",
@@ -41,30 +42,25 @@
     
   ],
   "navigation": [
+
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart"
+        "introduction"
+        
       ]
     },
     {
       "group": "Components",
       "pages": [
         "components/3DCard",
-        "components/AirpodsProLeft",
-        "components/AirpodsProRight",
         "components/Alert",
         "components/Audio",
         "components/Button",
         "components/Card",
-        "components/ChargingIconRight",
-        "components/ChargingTextLeft",
         "components/Checkbox",
         "components/Collapse",
-        "components/EmptyState",
         "components/ErrorMessage",
-        "components/Form",
         "components/GridLayout",
         "components/HelpTooltip",
         "components/Image",
@@ -79,17 +75,13 @@
         "components/Radio",
         "components/RangeSlider",
         "components/Select",
-        "components/SilentIconLeft",
         "components/SongThumbnail",
-        "components/SilentIconLeft4",
-        "components/SilentTextRight",
         "components/Spinner",
         "components/TabButton",
         "components/TextArea",
         "components/Toggle",
         "components/Toggle2",
-        "components/Tooltip",
-        "components/WarningMessage"
+        "components/Tooltip"
       ]
     }
    

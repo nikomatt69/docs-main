@@ -1,5 +1,5 @@
 ---
-title: GridLayout Component
+title: GridLayout 
 ---
 
 This component provides a grid layout, useful for arranging content in a grid format.
@@ -11,7 +11,7 @@ This component provides a grid layout, useful for arranging content in a grid fo
 
 ## Usage
 
-```tsx
+```javascript
 import { GridLayout } from 'mycrumbs-uikit';
 
 const props = {};
@@ -19,10 +19,16 @@ const props = {};
 <GridLayout prop1="value1" prop2="value2" />;
 ```
 
-<iframe src="https://663a6564311e0ec20c42bab9-xlpxfwvbkd.chromatic.com/iframe.html?args=&id=components-grid--default" width="600" height="200"  rounded="12px' className={'flex'}frameborder="0"></iframe>
+<iframe 
+  src="https://663a6564311e0ec20c42bab9-xlpxfwvbkd.chromatic.com/iframe.html?args=&id=components-grid--default"  
+  width="500" 
+  height="200"
+  style={{ borderRadius: '12px' }}
+  className="flex"
+  frameBorder="0"
+/>
 
-
-```tsx
+```javascript
 import type { FC, ReactNode } from 'react';
 
 import cn from '../cn';
@@ -63,7 +69,7 @@ export const GridItemFour: FC<GridProps> = ({ children, className = '' }) => {
 export const GridItemEight: FC<GridProps> = ({ children, className = '' }) => {
   return (
     <div
-      className={cn('col-span-12 mb-5 md:col-span-12 lg:col-span-8', className)}
+      className={cn('col-span-12 mb-5 md:col-span-12 lg:col-span-4', className)}
     >
       {children}
     </div>

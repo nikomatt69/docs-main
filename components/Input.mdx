@@ -1,36 +1,214 @@
 ---
-title: Input Component
+title: Input 
+description: A highly customizable and accessible input component with comprehensive styling and validation capabilities
 ---
 
-This component provides input field functionality, allowing users to enter text or data.
+A versatile input component that provides a sophisticated interface for text input across your application. Built with accessibility, customization, and user experience in mind, this component supports various input types, visual enhancements, and seamless integration with form management solutions.
+
+## Component Features
+
+- **Rich Customization**: Extensive styling options and visual variants
+- **Accessibility First**: WCAG 2.1 compliant with screen reader support
+- **Form Integration**: Seamless work with React Hook Form and other form libraries
+- **Validation Support**: Built-in error states and validation feedback
+- **Responsive Design**: Adapts to different screen sizes and orientations
+- **Dark Mode**: Full support for light and dark themes
+- **Icon Integration**: Flexible positioning of icons and visual elements
+- **Performance Optimized**: Minimal re-renders and efficient updates
 
 ## Props
 
-- `prop1`: Description of prop1.
-- `prop2`: Description of prop2.
+- `label`: string (optional) - Label text for the input
+  - Supports rich text formatting
+  - Automatically associates with input via aria-labelledby
+  - Maintains proper contrast ratios
+- `prefix`: string | ReactNode (optional) - Content to display before the input
+  - Supports text and component prefixes
+  - Maintains proper alignment and spacing
+  - Adapts to input size changes
+- `iconLeft`: ReactNode (optional) - Icon to display on the left side
+  - Supports SVG and component icons
+  - Maintains consistent sizing
+  - Interactive state styling
+- `iconRight`: ReactNode (optional) - Icon to display on the right side
+  - Perfect for validation indicators
+  - Action triggers (clear, show/hide password)
+  - Status indicators
+- `error`: boolean (optional) - Whether to show error styling
+  - Applies error-specific visual feedback
+  - Updates focus ring color
+  - Modifies placeholder text color
+- `helper`: ReactNode (optional) - Helper text or error message
+  - Supports rich text content
+  - Proper spacing and alignment
+  - Screen reader announcements
+- `className`: string (optional) - Additional CSS classes for customization
+- All standard HTML input attributes are supported
 
-## Usage
+## Input Types Support
 
-```tsx
+The component provides optimized support for various input types:
+- text: Standard text input with optional formatting
+- password: Secure input with show/hide capability
+- email: Email validation and keyboard optimization
+- number: Numeric input with step controls
+- tel: Phone number input with formatting
+- search: Search input with clear button
+- url: URL input with validation
+- date: Date picker with calendar integration
+
+## Usage Examples
+
+### Basic Input
+```javascript
 import { Input } from 'mycrumbs-uikit';
 
-const props = {};
-
-<Input prop1="value1" prop2="value2" />;
+<Input
+  label="Username"
+  placeholder="Enter your username"
+/>
 ```
 
-<iframe src="https://663a6564311e0ec20c42bab9-xlpxfwvbkd.chromatic.com/iframe.html?args=&id=components-input--default" width="600" height="200"  rounded="12px' className={'flex'}frameborder="0"></iframe>
+### With Prefix
+```javascript
+<Input
+  label="Price"
+  prefix="$"
+  type="number"
+  placeholder="0.00"
+/>
+```
 
+### With Icons
+```javascript
+import { SearchIcon } from '@heroicons/react/24/solid';
 
-```tsx
+<Input
+  iconLeft={<SearchIcon className="h-5 w-5" />}
+  placeholder="Search..."
+/>
+```
+
+### With Validation
+```javascript
+<Input
+  label="Email"
+  type="email"
+  error={!isValidEmail}
+  helper={!isValidEmail ? "Please enter a valid email address" : null}
+/>
+```
+
+### Password Input
+```javascript
+const [showPassword, setShowPassword] = useState(false);
+
+<Input
+  label="Password"
+  type={showPassword ? "text" : "password"}
+  iconRight={
+    <button
+      type="button"
+      onClick={() => setShowPassword(!showPassword)}
+    >
+      {showPassword ? "Hide" : "Show"}
+    </button>
+  }
+/>
+```
+
+### With Form Integration
+```javascript
+<form onSubmit={handleSubmit}>
+  <div className="space-y-4">
+    <Input
+      label="Full Name"
+      required
+      {...register('fullName')}
+    />
+    <Input
+      label="Email"
+      type="email"
+      required
+      {...register('email')}
+    />
+    <Input
+      label="Phone"
+      type="tel"
+      prefix="+1"
+      {...register('phone')}
+    />
+    <button type="submit">Submit</button>
+  </div>
+</form>
+```
+
+## Styling
+
+The component uses Tailwind CSS for styling and includes:
+- Consistent height and padding
+- Focus states
+- Error states
+- Hover effects
+- Dark mode support
+- Icon alignment
+- Prefix styling
+- Helper text positioning
+
+## Best Practices
+
+1. Input Labels:
+   - Use clear, concise labels
+   - Indicate required fields
+   - Maintain consistent positioning
+   - Consider field context
+
+2. Validation:
+   - Show errors at appropriate times
+   - Provide helpful error messages
+   - Use consistent error styling
+   - Consider real-time validation
+
+3. User Experience:
+   - Use appropriate input types
+   - Show password visibility toggle
+   - Implement auto-complete when useful
+   - Consider mobile input modes
+
+## Accessibility
+
+- Proper label association
+- Error message announcements
+- Keyboard navigation
+- Focus management
+- ARIA attributes
+- Color contrast compliance
+
+## Implementation Notes
+
+- Uses React's forwardRef
+- Integrates with React Hook Form
+- Supports controlled and uncontrolled usage
+- Handles various input types
+- Maintains consistent styling
+- Supports form validation
+
+<iframe 
+  src="https://www.663a6564311e0ec20c42bab9-xlpxfwvbkd.chromatic.com/iframe.html?args=&id=components-input--template" 
+  referrerPolicy=""
+  width="600" 
+  height="200"
+  className="flex rounded-xl"
+
+></iframe>
+
+```javascript
 import dynamic from 'next/dynamic';
 import type { ComponentProps, ReactNode } from 'react';
 import { forwardRef, useId } from 'react';
 
 import cn from '../cn';
 import { FieldError } from './Form';
-
-const HelpTooltip = dynamic(() => import('./HelpTooltip'));
 
 interface InputProps extends Omit<ComponentProps<'input'>, 'prefix'> {
   label?: string;

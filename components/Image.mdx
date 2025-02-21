@@ -1,29 +1,135 @@
 ---
-title: Image Component
+title: Image 
 ---
 
-This component provides image display functionality, allowing images to be rendered in the UI.
+An enhanced image component that provides error handling, loading states, and fallback functionality. Built on top of the native HTML img element with additional features for better user experience.
 
 ## Props
 
-- `prop1`: Description of prop1.
-- `prop2`: Description of prop2.
+- All standard HTML img attributes are supported
+- `onError`: Function - Custom error handler for image loading failures
+- `ref`: React.Ref - React ref for accessing the image element
 
-## Usage
+## Features
 
-```tsx
+- Automatic error handling
+- Fallback on load failure
+- Ref forwarding
+- Alt text support
+- Lazy loading capability
+- Native browser caching
+
+## Usage Examples
+
+### Basic Image
+```javascript
 import { Image } from 'mycrumbs-uikit';
 
-const props = {};
-
-<Image prop1="value1" prop2="value2" />;
+<Image
+  src="/path/to/image.jpg"
+  alt="Description of the image"
+/>
 ```
 
-<iframe src="https://example.com" width="600" height="200"  rounded="12px' className={'flex'}frameborder="0"></iframe>
+### With Error Handling
+```javascript
+<Image
+  src="/path/to/image.jpg"
+  alt="Profile picture"
+  onError={(e) => {
+    console.error('Image failed to load:', e);
+  }}
+/>
+```
 
+### Responsive Image
+```javascript
+<Image
+  src="/path/to/image.jpg"
+  alt="Responsive image"
+  className="w-full h-auto max-w-lg"
+/>
+```
 
-```tsx
+### With Loading Attributes
+```javascript
+<Image
+  src="/path/to/large-image.jpg"
+  alt="Lazy loaded image"
+  loading="lazy"
+  width={800}
+  height={600}
+/>
+```
 
+### With Fallback
+```javascript
+const [imageSrc, setImageSrc] = useState('/path/to/image.jpg');
+
+<Image
+  src={imageSrc}
+  alt="Image with fallback"
+  onError={() => setImageSrc('/path/to/fallback.jpg')}
+/>
+```
+
+## Best Practices
+
+1. Image Loading:
+   - Use appropriate image sizes
+   - Implement lazy loading
+   - Provide width and height
+   - Consider responsive images
+
+2. Error Handling:
+   - Always provide fallback behavior
+   - Log errors when needed
+   - Show user-friendly messages
+   - Handle network issues
+
+3. Accessibility:
+   - Use descriptive alt text
+   - Consider color contrast
+   - Maintain aspect ratios
+   - Support screen readers
+
+## Performance Tips
+
+- Use appropriate image formats
+- Implement lazy loading
+- Optimize image sizes
+- Use browser caching
+- Consider CDN usage
+- Implement responsive images
+
+## Styling
+
+The component supports all standard image styling including:
+- Width and height
+- Object fit properties
+- Border and border radius
+- Margin and padding
+- Responsive classes
+- Transition effects
+
+## Error States
+
+The component handles various error scenarios:
+- Network failures
+- Invalid image sources
+- Loading timeouts
+- Missing resources
+- CORS issues
+
+<iframe 
+  src="https://663a6564311e0ec20c42bab9-xlpxfwvbkd.chromatic.com/iframe.html?args=&id=components-image--default" 
+  width="600" 
+  height="200"
+  className="flex rounded-xl"
+
+></iframe>
+
+```javascript
 import type {
   DetailedHTMLProps,
   ImgHTMLAttributes,
@@ -31,6 +137,11 @@ import type {
   SyntheticEvent
 } from 'react';
 import { forwardRef, useCallback, useEffect, useState } from 'react';
+
+interface ImageProps extends DetailedHTMLProps<
+  ImgHTMLAttributes<HTMLImageElement>,
+  HTMLImageElement
+> {}
 
 export const Image = forwardRef(function Image(
   {
@@ -68,5 +179,3 @@ export const Image = forwardRef(function Image(
     />
   );
 });
-
-```
