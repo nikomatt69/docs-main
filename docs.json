@@ -9,8 +9,8 @@
   },
   "favicon": "/favicon.png",
   "navigation": {
-    "anchors": [
-      {
+
+      
         "anchor": "Components",
         "icon": "slack",
         "groups": [
@@ -53,12 +53,9 @@
           }
         ]
       }
-    ]
+
   },
-  "logo": {
-    "light": "/logo/light.png",
-    "dark": "/logo/dark.png"
-  },
+
   "navbar": {
     "links": [
       {
