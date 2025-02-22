@@ -7,7 +7,7 @@
     "light": "#1d4ed8",
     "dark": "#3b82f6"
   },
-  "favicon": "/favicon.png",
+  "favicon": "./favicon.png",
   "navigation": {
     "anchors": [
       {
@@ -47,8 +47,7 @@
               "components/TextArea",
               "components/Toggle",
               "components/Toggle2",
-              "components/Tooltip",
-              "components/WarningMessage"
+              "components/Tooltip"
             ]
           }
         ]
@@ -56,8 +55,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.png",
-    "dark": "/logo/dark.png"
+    "light": "./logo/light.png",
+    "dark": "./logo/dark.png"
   },
   "navbar": {
     "links": [
