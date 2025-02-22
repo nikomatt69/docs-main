@@ -19,35 +19,19 @@
             "pages": [
               "components/3DCard",
               "components/Alert",
-              "components/Audio",
               "components/Button",
               "components/Card",
               "components/Checkbox",
               "components/Collapse",
-              "components/EmptyState",
-              "components/ErrorMessage",
-              "components/Form",
               "components/GridLayout",
               "components/HelpTooltip",
               "components/Image",
               "components/Input",
-              "components/Lamp",
-              "components/LightBox",
               "components/Modal",
-              "components/MovingBorder",
-              "components/PageLoading",
-              "components/Popover",
-              "components/PropertyDefault",
-              "components/Radio",
-              "components/RangeSlider",
               "components/Select",
-              "components/SongThumbnail",
               "components/Spinner",
-              "components/TabButton",
               "components/TextArea",
-              "components/Toggle",
-              "components/Toggle2",
-              "components/Tooltip"
+              "components/Toggle"
             ]
           }
         ]
