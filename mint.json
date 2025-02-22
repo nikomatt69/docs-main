@@ -18,21 +18,16 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:nicola.mattioli.95@gmail.com"
+      "url": "mailto:nikoemme@skiff.com"
     }
   ],
   "topbarCtaButton": {
     "name": "Website",
-    "url": "https://www.mycrumbs.xyz"
+    "url": "https://mycrumbs.xyz"
   },
   
   "anchors": [
-    
-    {
-      "name": "Get Started",
-      "icon": "book",
-      "url": "introduction"
-    },
+  
    
     {
       "name": "Components",
@@ -42,14 +37,7 @@
     
   ],
   "navigation": [
-
-    {
-      "group": "Get Started",
-      "pages": [
-        "introduction"
-        
-      ]
-    },
+   
     {
       "group": "Components",
       "pages": [
@@ -60,7 +48,9 @@
         "components/Card",
         "components/Checkbox",
         "components/Collapse",
+        "components/EmptyState",
         "components/ErrorMessage",
+        "components/Form",
         "components/GridLayout",
         "components/HelpTooltip",
         "components/Image",
@@ -81,7 +71,8 @@
         "components/TextArea",
         "components/Toggle",
         "components/Toggle2",
-        "components/Tooltip"
+        "components/Tooltip",
+        "components/WarningMessage"
       ]
     }
    

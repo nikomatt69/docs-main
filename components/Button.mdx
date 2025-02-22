@@ -128,7 +128,7 @@ The component uses Tailwind CSS for styling and includes:
 
 ```javascript
 import type { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
-import { forwardRef } from 'react';
+import { Ref } from 'react';
 
 import cn from '../cn';
 
@@ -145,7 +145,7 @@ interface ButtonProps
   className?: string;
 }
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = Ref<HTMLButtonElement, ButtonProps>(
   function Button(
     {
       className = '',

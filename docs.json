@@ -7,22 +7,9 @@
     "light": "#1d4ed8",
     "dark": "#3b82f6"
   },
-  
   "favicon": "/favicon.png",
   "navigation": {
     "anchors": [
-      {
-        "anchor": "Get Started",
-        "icon": "book",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction"
-            ]
-          }
-        ]
-      },
       {
         "anchor": "Components",
         "icon": "slack",
@@ -60,7 +47,8 @@
               "components/TextArea",
               "components/Toggle",
               "components/Toggle2",
-              "components/Tooltip"
+              "components/Tooltip",
+              "components/WarningMessage"
             ]
           }
         ]
@@ -71,13 +59,11 @@
     "light": "/logo/light.png",
     "dark": "/logo/dark.png"
   },
-  "seo": {
-  },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:nicola.mattioli.95@gmail.com"
+        "href": "mailto:nikoemme@skiff.com"
       }
     ],
     "primary": {
