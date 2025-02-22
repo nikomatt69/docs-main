@@ -1,10 +1,7 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
+  "$schema": "https://www.mintlify.com/schema.json",
   "name": "MyCrumbsUI",
-  "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
-  },
+  
   "favicon": "/favicon.png",
   "colors": {
     "primary": "#3b82f6",
@@ -26,16 +23,7 @@
     "url": "https://mycrumbs.xyz"
   },
   
-  "anchors": [
   
-   
-    {
-      "name": "Components",
-      "icon": "slack",
-      "url": "components"
-    }
-    
-  ],
   "navigation": [
    
     {

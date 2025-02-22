@@ -1,5 +1,5 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "$schema": "https://www.mintlify.com/docs.json",
   "theme": "mint",
   "name": "MyCrumbsUI",
   "colors": {
@@ -52,8 +52,7 @@
             ]
           }
         ]
-      }
-
+      
   },
 
   "navbar": {
